@@ -1,0 +1,18 @@
+.card {
+    margin-bottom:0.65rem;
+    margin-left: 6rem;
+    margin-right: 5.8rem;
+    border-radius: 0 !important;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.card-text {
+    font-size: .875rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
