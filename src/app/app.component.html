@@ -5,4 +5,11 @@
     <app-expectations></app-expectations>
     <p class="fs-6">Important Messages</p>
     <app-important></app-important>
+
+    <p class="fs-6">Campus Resources</p>
+    <div class="card-container">
+        <div *ngFor="let link of links" >
+            <app-link-cards text="{{link.text}}" link="{{link.link}}" ></app-link-cards>
+        </div>
+    </div>
 </div>

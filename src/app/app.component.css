@@ -13,3 +13,15 @@
     margin-bottom:0.65rem;
     margin-left: 6rem;
 }
+
+.card-container{
+    margin-left: 6rem;
+    margin-right: 41rem;
+    padding: 0;
+    display:grid;
+    grid-template-columns: repeat(2, 100%);
+    flex-direction: column;
+    row-gap: 0%;
+    column-gap: 3%;
+    margin-bottom: 4rem;
+}
