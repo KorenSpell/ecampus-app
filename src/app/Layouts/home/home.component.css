@@ -1,0 +1,27 @@
+.banner {
+    height: 9.5rem;
+    position: relative;
+    margin-left: 178px;
+    width: 88.4%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://ecampus.wvu.edu/bbcswebdav/xid-112545786_1");
+}
+
+.fs-6 {
+    margin-top: 2.875rem;
+    margin-bottom:0.65rem;
+    margin-left: 6rem;
+}
+
+.card-container{
+    margin-left: 6rem;
+    margin-right: 41rem;
+    padding: 0;
+    display:grid;
+    grid-template-columns: repeat(2, 100%);
+    flex-direction: column;
+    row-gap: 0%;
+    column-gap: 3%;
+    margin-bottom: 4rem;
+}
