@@ -1,0 +1,15 @@
+.banner {
+    width: auto;
+    height: 107px;
+    text-align: left;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.big-text {
+    color: #262626;
+    font-family: "Noto Serif",serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+    padding-top: 33px;
+    padding-left: 1%;
+}

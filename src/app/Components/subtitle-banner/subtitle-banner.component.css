@@ -1,0 +1,16 @@
+.banner {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 60px;
+}
+
+.subheader {
+    color: #737373;
+    text-align: center;
+    font-weight: 100;
+    font-size: x-large;
+    font-family: "Open Sans",sans-serif;
+    padding-top:8px;
+}

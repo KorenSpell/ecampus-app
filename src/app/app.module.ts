@@ -13,6 +13,10 @@ import { MessagesComponent } from './Layouts/messages/messages.component';
 import { CoursesComponent } from './Layouts/courses/courses.component';
 import { ActivityComponent } from './Layouts/activity/activity.component';
 import { HomeComponent } from './Layouts/home/home.component';
+import { TitleBannerComponent } from './Components/title-banner/title-banner.component';
+import { SubtitleBannerComponent } from './Components/subtitle-banner/subtitle-banner.component';
+import { GradeCardsComponent } from './Components/grade-cards/grade-cards.component';
+import { MessageCardsComponent } from './Components/message-cards/message-cards.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { HomeComponent } from './Layouts/home/home.component';
     MessagesComponent,
     CoursesComponent,
     ActivityComponent,
-    HomeComponent
+    HomeComponent,
+    TitleBannerComponent,
+    SubtitleBannerComponent,
+    GradeCardsComponent,
+    MessageCardsComponent
   ],
   imports: [
     BrowserModule,
