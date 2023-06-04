@@ -1,5 +1,7 @@
 <div class="container" style="margin-left: 178px;">
     <app-title-banner text="Messages"></app-title-banner>
     <app-subtitle-banner text="Current Courses and Organizations"></app-subtitle-banner>
-    <app-message-cards></app-message-cards>
+    <div *ngFor="let message of messages">
+        <app-message-cards light="{{message.light}}" dark="{{message.dark}}"></app-message-cards>
+    </div>
 </div>

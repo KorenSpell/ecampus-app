@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-message-cards',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./message-cards.component.css']
 })
 export class MessageCardsComponent {
+
+  @Input()
+  light! : string;
+  @Input()
+  dark! : string;
 
 }
