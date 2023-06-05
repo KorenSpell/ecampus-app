@@ -1,5 +1,7 @@
 <div class="container" style="margin-left: 178px;">
     <app-title-banner text="Grades"></app-title-banner>
     <app-subtitle-banner text="Current Courses and Organizations"></app-subtitle-banner>
-    <app-grade-cards></app-grade-cards>
+    <div *ngFor="let grade of grades">
+        <app-grade-cards light="{{grade.light}}" dark="{{grade.dark}}" letter="{{grade.letter}}" quiz="{{grade.quiz}}" exam="{{grade.exam}}"></app-grade-cards>
+    </div>
 </div>

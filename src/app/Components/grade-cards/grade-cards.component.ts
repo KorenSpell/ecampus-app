@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grade-cards',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class GradeCardsComponent {
 
+  @Input()
+  light!: string;
+  @Input()
+  dark!: string;
+  @Input()
+  letter!: string;
+  @Input()
+  quiz!: string;
+  @Input()
+  exam!: string;
 }
