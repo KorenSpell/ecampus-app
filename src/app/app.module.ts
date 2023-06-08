@@ -17,6 +17,8 @@ import { TitleBannerComponent } from './Components/title-banner/title-banner.com
 import { SubtitleBannerComponent } from './Components/subtitle-banner/subtitle-banner.component';
 import { GradeCardsComponent } from './Components/grade-cards/grade-cards.component';
 import { MessageCardsComponent } from './Components/message-cards/message-cards.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserInfoComponent } from './Components/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,13 @@ import { MessageCardsComponent } from './Components/message-cards/message-cards.
     TitleBannerComponent,
     SubtitleBannerComponent,
     GradeCardsComponent,
-    MessageCardsComponent
+    MessageCardsComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

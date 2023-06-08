@@ -1,0 +1,17 @@
+<div class="container-fluid" style="padding-left: 178px">
+    <div class="d-flex flex-row justify-content-between">
+        <div class="flex-column">
+            <p *ngIf="myInfo == undefined">Failed to retrieve data</p>
+            <p *ngIf="myInfo != undefined">Name: {{myInfo.FirstName}} {{myInfo.LastName}} </p>
+        </div>
+        <div class="flex-column">
+            <p *ngIf="myInfo != undefined">Mix-ID: {{myInfo.mix_id}} </p>
+        </div>
+        <div class="flex-column">
+            <a href="{{myInfo.GitHub}}" *ngIf="myInfo != undefined">GitHub: {{myInfo.GitHub}} </a>
+        </div>
+    </div>
+</div>
+
+
+
