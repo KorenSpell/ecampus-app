@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/ecampus-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
