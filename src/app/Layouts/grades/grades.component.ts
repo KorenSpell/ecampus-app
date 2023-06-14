@@ -1,20 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { grade } from 'src/app/Components/grade-cards/grade.model';
-import { mock_grades } from 'src/app/Components/grade-cards/mock-grades';
+import { GradesService } from './grades.service';
 
 @Component({
   selector: 'app-grades',
   templateUrl: './grades.component.html',
   styleUrls: ['./grades.component.css']
 })
-export class GradesComponent {
+export class GradesComponent implements OnInit {
 
   grades: grade[] = [];
 
-  constructor() {
-    for(var graded of mock_grades){
-      this.grades.push(new grade(graded));
-    }
+  constructor(private gradesService:GradesService) {}
+
+  ngOnInit(): void {
+    this.gradesService.getLinks().subscribe((data:grade []) => {
+      console.log("Fetching grades");
+      for(var graded of data) {
+        this.grades.push(new grade(graded));
+      }
+    });
   }
 
 }

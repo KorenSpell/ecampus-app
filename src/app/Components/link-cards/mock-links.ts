@@ -1,7 +1,7 @@
 export const mock_links = [
     {
         link: "https://careerservices.wvu.edu/",
-        text: "Carrer Services"
+        text: "Career Services"
     },
     {
         link: "https://wvu.bncollege.com/",
@@ -33,7 +33,7 @@ export const mock_links = [
     },
     {
         link: "https://www.wvu.edu/",
-        text: "West Virginia Univeristy (WVU)"
+        text: "West Virginia University (WVU)"
     },
     {
         link: "https://library.wvu.edu/libraries/beckley",

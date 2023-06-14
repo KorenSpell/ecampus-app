@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { message } from 'src/app/Components/message-cards/message.model';
-import { mock_messages } from 'src/app/Components/message-cards/mock-messages';
+import { MessagesService } from './messages.service';
 
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent {
+export class MessagesComponent implements OnInit {
 
   messages: message[] = [];
 
-  constructor() {
-    for(var messaged of mock_messages) {
-      this.messages.push(new message(messaged));
-    }
+  constructor(private messagesService:MessagesService) {}
+
+  ngOnInit(): void {
+    this.messagesService.getLinks().subscribe((data:message []) => {
+      console.log("Fetching messages");
+      for(var messaged of data) {
+        this.messages.push(new message(messaged));
+      }
+    });
   }
 }
