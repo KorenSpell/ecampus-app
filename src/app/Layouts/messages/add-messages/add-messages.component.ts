@@ -12,8 +12,6 @@ export class AddMessagesComponent {
   constructor(private ms: MessagesService) {}
 
   AddMessage(message: message) {
-    console.log("New Message Added");
-    console.log(message);
     this.ms.addLinks(message);
   }
 }

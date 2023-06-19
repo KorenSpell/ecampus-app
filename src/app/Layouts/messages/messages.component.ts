@@ -15,7 +15,6 @@ export class MessagesComponent implements OnInit {
 
   ngOnInit(): void {
     this.messagesService.getLinks().subscribe((data:message []) => {
-      console.log("Fetching messages");
       for(var messaged of data) {
         this.messages.push(new message(messaged));
       }
