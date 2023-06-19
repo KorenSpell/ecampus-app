@@ -1,19 +1,17 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { AngularFireDatabase } from "@angular/fire/compat/database";
 import { grade } from "src/app/Components/grade-cards/grade.model";
 
 @Injectable(
     {providedIn: 'root'}
 )
 export class GradesService {
-    private baseUrl:string = "https://ecampus-app-3c691-default-rtdb.firebaseio.com/";
-    private gradesEndPoint:string = "grades.json";
 
-    constructor(private http:HttpClient) {
+    constructor(private db: AngularFireDatabase) {
 
     }
 
     getLinks() {
-        return this.http.get<grade []>(this.baseUrl + this.gradesEndPoint);
+        return this.db.list<grade>("grades").valueChanges();
     }
 }

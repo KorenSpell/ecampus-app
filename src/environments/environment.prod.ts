@@ -1,4 +1,14 @@
 export const environment ={
+  firebase: {
+    projectId: 'ecampus-app-3c691',
+    appId: '1:870795948018:web:8d4c4a00dc59750e6dc56b',
+    databaseURL: 'https://ecampus-app-3c691-default-rtdb.firebaseio.com',
+    storageBucket: 'ecampus-app-3c691.appspot.com',
+    apiKey: 'AIzaSyCm5ELJ1-6yl4-_U2iAcNDslDfB8CmE8ww',
+    authDomain: 'ecampus-app-3c691.firebaseapp.com',
+    messagingSenderId: '870795948018',
+    measurementId: 'G-KFCS1ZPZ2L',
+  },
     production:true
 };
 

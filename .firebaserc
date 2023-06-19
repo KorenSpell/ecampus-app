@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ecampus-app-3c691"
+  },
+  "targets": {
+    "ecampus-app-3c691": {
+      "hosting": {
+        "ecampus-app": [
+          "ecampus-app-3c691"
+        ]
+      }
+    }
   }
 }

@@ -19,6 +19,12 @@ import { GradeCardsComponent } from './Components/grade-cards/grade-cards.compon
 import { MessageCardsComponent } from './Components/message-cards/message-cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoComponent } from './Components/user-info/user-info.component';
+import { AddMessagesComponent } from './Layouts/messages/add-messages/add-messages.component';
+import { FormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -37,14 +43,18 @@ import { UserInfoComponent } from './Components/user-info/user-info.component';
     SubtitleBannerComponent,
     GradeCardsComponent,
     MessageCardsComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    AddMessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase())
   ],
-  providers: [],
+  providers: [ { provide: FIREBASE_OPTIONS, useValue: environment.firebase } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

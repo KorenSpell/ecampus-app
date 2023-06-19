@@ -1,19 +1,21 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { message } from "src/app/Components/message-cards/message.model";
+import { AngularFireDatabase } from "@angular/fire/compat/database"
 
 @Injectable(
     {providedIn: 'root'}
 )
 export class MessagesService {
-    private baseUrl:string = "https://ecampus-app-3c691-default-rtdb.firebaseio.com/";
-    private messagesEndPoint:string = "messages.json";
 
-    constructor(private http:HttpClient) {
+    constructor(private db:AngularFireDatabase) {
 
     }
 
     getLinks() {
-        return this.http.get<message []>(this.baseUrl + this.messagesEndPoint);
+        return this.db.list<message>("messages").valueChanges();
+    }
+
+    addLinks( message: message) {
+        this.db.list<message>("messages").push(message)
     }
 }

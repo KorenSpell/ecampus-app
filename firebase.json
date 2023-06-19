@@ -1,10 +1,17 @@
 {
-  "hosting": {
-    "public": "dist/ecampus-app",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "public": "dist/ecampus-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "ecampus-app",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
 }

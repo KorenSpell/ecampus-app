@@ -1,0 +1,21 @@
+<div class="container" style="padding-left: 100px; padding-top:40px;">
+    <div class="row">
+        <div class="col-8">
+            <h4>Create New Message Card</h4>
+            <form #postForm="ngForm" (ngSubmit)="AddMessage(postForm.value)">
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 125px">Light Heading</span>
+                    <input type="text" class="form-control" required ngModel name="light">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 125px">Dark Heading</span>
+                    <input type="text" class="form-control" required ngModel name="dark">
+                </div>
+
+                <button class="btn btn-dark" type="submit" [disabled]="!postForm.valid">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
