@@ -8,6 +8,7 @@ import { ToolsComponent } from './Layouts/tools/tools.component';
 import { ActivityComponent } from './Layouts/activity/activity.component';
 import { HomeComponent } from './Layouts/home/home.component';
 import { AddMessagesComponent } from './Layouts/messages/add-messages/add-messages.component';
+import { AuthComponent } from './Components/auth/auth.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AddMessagesComponent
+  },
+  {
+    path: 'auth',
+    component: AuthComponent
   },
   {
     path: 'course',

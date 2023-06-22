@@ -25,6 +25,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AuthComponent } from './Components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     GradeCardsComponent,
     MessageCardsComponent,
     UserInfoComponent,
-    AddMessagesComponent
+    AddMessagesComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

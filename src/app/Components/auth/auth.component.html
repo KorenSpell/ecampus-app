@@ -1,0 +1,23 @@
+<div class="container" style="padding-left: 100px; padding-top: 40px;">
+    <div class="row">
+        <div class="col-8">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 125px;">Email</span>
+                    <input type="text" class="form-control" ngModel name="email" required email placeholder="ex: user@domain.com">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 125px;">Password</span>
+                    <input type="password" class="form-control" ngModel name="password" required password minlength="8" placeholder="at least 8 chars">
+                </div>
+
+                <button class="btn btn-dark" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='signup'">
+                    Sign-Up
+                </button>
+                <button class="btn btn-dark" type="submit" [disabled]="!authForm.valid" (click)="buttonClicked='login'">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
